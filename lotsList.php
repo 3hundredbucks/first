@@ -1,6 +1,5 @@
 <?php
 
-$title = htmlspecialchars('Главная');
 $user_name = 'Константин';
 $user_avatar = 'img/user.jpg';
 
