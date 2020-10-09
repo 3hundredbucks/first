@@ -58,7 +58,7 @@ if ($is_auth) {
         }
 
         if (count($errors)) {
-            $page_content = renderTemplate('templates/add.php', [
+            $page_content = include_template('templates/add-lot.php', [
                 'form_error' => $form_error,
                 'name_error' => $errors['lot-name'],
                 'category_error' => $errors['category'],

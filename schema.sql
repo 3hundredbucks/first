@@ -39,6 +39,7 @@ CREATE INDEX price ON bets(price);
 CREATE INDEX lot_id ON bets(lot_id);
 CREATE INDEX user_id ON bets(user_id);
 
+DROP TABLE IF EXISTS users;
 CREATE TABLE users (
 id SMALLINT AUTO_INCREMENT PRIMARY KEY,
 name CHAR(64),

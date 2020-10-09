@@ -4,6 +4,19 @@ require_once('functions.php');
 
 session_start();
 
+if(!$link){
+    print("Нет доступа к базе данных");
+}
+else{
+    $query_cat = mysqli_query($link, 'SELECT id_cat, cat_name FROM category ORDER BY id_cat');
+    if($query_cat) {
+        $categories = mysql_fetch_all($query_cat, MYSQLI_ASSOC);
+    }
+    else{
+        print("Ошибка: " . mysqli_error($link));
+    }
+}
+
 if(isset($_SESSION['user_name'])){
     $user_name = $_SESSION['user_name'];
     $is_auth = $_SESSION['is_auth'];
